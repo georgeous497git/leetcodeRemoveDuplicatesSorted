@@ -10,6 +10,7 @@ package com.lambda.remove.duplicates;
 
 public class RemoveDuplicatesSorted {
 	
+	//Linear time complexity  O(N)
 	public static int removeDuplicates(int[] nums) {
 
 		int p1 = 0;
@@ -19,13 +20,15 @@ public class RemoveDuplicatesSorted {
 			return 0;
 		}
 
+		//For loop - Linear time complexity  O(N) 
 		for (int indice = 0; indice < nums.length - 1; indice++) {
 
+			//Get data from specific position 'nums[i]' - Constant time complexity O(1)
 			if (nums[p1] != nums[p2]) {
 				p1++;
 				
 				if(p1 != p2) {
-					// copy number
+					//Get data from specific position 'nums[i]' - Constant time complexity O(1)
 					nums[p1] = nums[p2];
 				}
 			}
